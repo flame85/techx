@@ -1,0 +1,17 @@
+<package>
+  <description brief="bumblebee_grabber">
+      This package contains a node that computes stereo(disparity, point cloud) from a pair of stereo images. It uses the PtGrey triclops library.
+  </description>
+  <author>Marius Muja</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://pr.willowgarage.com/wiki/bumblebee_stereo</url>
+
+  <depend package="opencv2"/>
+  <depend package="tf"/>
+  <depend package="cv_bridge"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+</package>
+
+

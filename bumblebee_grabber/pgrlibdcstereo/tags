@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BAYER_TILE_MAPPING_REGISTER	pgr_registers.h	39;"	d
+BUMBLEBEE	pgr_stereocam.h	/^   BUMBLEBEE,$/;"	e	enum:__anon1
+BUMBLEBEE2	pgr_stereocam.h	/^   BUMBLEBEE2,$/;"	e	enum:__anon1
+BUMBLEBEEXB3	pgr_stereocam.h	/^   BUMBLEBEEXB3$/;"	e	enum:__anon1
+DC	Makefile	/^DC = libdc1394-2$/;"	m
+IMAGE_DATA_FORMAT_REGISTER	pgr_registers.h	41;"	d
+LIBRARY	Makefile	/^LIBRARY		= libmypgrlibdcstereo.a$/;"	m
+LIBRARY_NAME	Makefile	/^LIBRARY_NAME	= pgrlibdcstereo$/;"	m
+LIBRARY_SRC	Makefile	/^LIBRARY_SRC	= pgr_conversions.cpp \\$/;"	m
+PGRStereoCameraModel_t	pgr_stereocam.h	/^} PGRStereoCameraModel_t;$/;"	t	typeref:enum:__anon1
+PGRStereoCamera_t	pgr_stereocam.h	/^} PGRStereoCamera_t;$/;"	t	typeref:struct:__anon2
+PGR_CONVERSIONS_H	pgr_conversions.h	2;"	d
+PGR_REGISTERS_H	pgr_registers.h	2;"	d
+PGR_STEREOCAM_H	pgr_stereocam.h	2;"	d
+REG_CONFIG_DATA	pgr_stereocam.cpp	640;"	d	file:
+REG_CONFIG_LENGTH	pgr_stereocam.cpp	639;"	d	file:
+REG_UNIT_DIRECTORY_OFFSET	pgr_stereocam.cpp	641;"	d	file:
+ROOT_INCLUDE	Makefile	/^ROOT_INCLUDE = \/usr\/local\/include$/;"	m
+SENSOR_BOARD_INFO_REGISTER	pgr_registers.h	40;"	d
+TRICLOPS	Makefile	/^TRICLOPS = triclops3.3$/;"	m
+UNKNOWN_CAMERA	pgr_stereocam.h	/^   UNKNOWN_CAMERA,$/;"	e	enum:__anon1
+__anon2::bColor	pgr_stereocam.h	/^      bool			bColor;$/;"	m	struct:__anon2	access:public
+__anon2::bayerTile	pgr_stereocam.h	/^      dc1394color_filter_t	bayerTile;$/;"	m	struct:__anon2	access:public
+__anon2::camera	pgr_stereocam.h	/^      dc1394camera_t*		camera;$/;"	m	struct:__anon2	access:public
+__anon2::model	pgr_stereocam.h	/^      PGRStereoCameraModel_t	model;$/;"	m	struct:__anon2	access:public
+__anon2::nBytesPerPixel	pgr_stereocam.h	/^      unsigned int		nBytesPerPixel;$/;"	m	struct:__anon2	access:public
+__anon2::nCols	pgr_stereocam.h	/^      unsigned int		nCols;$/;"	m	struct:__anon2	access:public
+__anon2::nRows	pgr_stereocam.h	/^      unsigned int		nRows;$/;"	m	struct:__anon2	access:public
+bColor	pgr_stereocam.h	/^      bool			bColor;$/;"	m	struct:__anon2	access:public
+bayerTile	pgr_stereocam.h	/^      dc1394color_filter_t	bayerTile;$/;"	m	struct:__anon2	access:public
+camera	pgr_stereocam.h	/^      dc1394camera_t*		camera;$/;"	m	struct:__anon2	access:public
+dc1394_deinterlace_green	pgr_conversions.cpp	/^dc1394_deinterlace_green( unsigned char* src, $/;"	f	signature:( unsigned char* src, unsigned char* dest, unsigned int width, unsigned int height)
+dc1394_deinterlace_green	pgr_conversions.h	/^dc1394_deinterlace_green( unsigned char* src, $/;"	p	signature:( unsigned char* src, unsigned char* dest, unsigned int width, unsigned int height)
+dc1394_deinterlace_rgb	pgr_conversions.cpp	/^dc1394_deinterlace_rgb( unsigned char* src, $/;"	f	signature:( unsigned char* src, unsigned char* dest, unsigned int width, unsigned int height)
+dc1394_deinterlace_rgb	pgr_conversions.h	/^dc1394_deinterlace_rgb( unsigned char* src, $/;"	p	signature:( unsigned char* src, unsigned char* dest, unsigned int width, unsigned int height)
+extractImagesColor	pgr_stereocam.cpp	/^extractImagesColor( PGRStereoCamera_t* 	 stereoCamera, $/;"	f	signature:( PGRStereoCamera_t* stereoCamera, dc1394bayer_method_t bayerMethod, unsigned char* pucDeInterleaved, unsigned char* pucRGB, unsigned char* pucGreen, unsigned char** ppucRightRGB, unsigned char** ppucLeftRGB, unsigned char** ppucCenterRGB, TriclopsInput* pTriclopsInput )
+extractImagesColor	pgr_stereocam.h	/^extractImagesColor( PGRStereoCamera_t* 	stereoCamera, $/;"	p	signature:( PGRStereoCamera_t* stereoCamera, dc1394bayer_method_t bayerMethod, unsigned char* pucDeInterleaved, unsigned char* pucRGB, unsigned char* pucGreen, unsigned char** ppucRightRGB, unsigned char** ppucLeftRGB, unsigned char** ppucCenterRGB, TriclopsInput* pTriclopsInput )
+extractImagesColorXB3	pgr_stereocam.cpp	/^extractImagesColorXB3( PGRStereoCamera_t* 	 stereoCamera, $/;"	f	signature:( PGRStereoCamera_t* stereoCamera, dc1394bayer_method_t bayerMethod, unsigned char* pucDeInterleaved, unsigned char* pucRGB, unsigned char* pucGreen, unsigned char** ppucRightRGB, unsigned char** ppucLeftRGB, unsigned char** ppucCenterRGB, TriclopsInput* pShortInput, TriclopsInput* pWideInput )
+extractImagesColorXB3	pgr_stereocam.h	/^extractImagesColorXB3( PGRStereoCamera_t* 	stereoCamera, $/;"	p	signature:( PGRStereoCamera_t* stereoCamera, dc1394bayer_method_t bayerMethod, unsigned char* pucDeInterleaved, unsigned char* pucRGB, unsigned char* pucGreen, unsigned char** ppucRightRGB, unsigned char** ppucLeftRGB, unsigned char** ppucCenterRGB, TriclopsInput* pShortInput, TriclopsInput* pWideInput )
+extractImagesMono	pgr_stereocam.cpp	/^extractImagesMono( PGRStereoCamera_t* 	stereoCamera, $/;"	f	signature:( PGRStereoCamera_t* stereoCamera, unsigned char* pucDeInterleaved, unsigned char** ppucRightMono8, unsigned char** ppucLeftMono8, unsigned char** ppucCenterMono8, TriclopsInput* pTriclopsInput )
+extractImagesMono	pgr_stereocam.h	/^extractImagesMono( PGRStereoCamera_t* 	stereoCamera, $/;"	p	signature:( PGRStereoCamera_t* stereoCamera, unsigned char* pucDeInterleaved, unsigned char** ppucRightMono8, unsigned char** ppucLeftMono8, unsigned char** ppucCenterMono8, TriclopsInput* pTriclopsInput )
+extractImagesMonoXB3	pgr_stereocam.cpp	/^extractImagesMonoXB3( PGRStereoCamera_t* 	stereoCamera, $/;"	f	signature:( PGRStereoCamera_t* stereoCamera, unsigned char* pucDeInterleaved, unsigned char** ppucRightMono8, unsigned char** ppucLeftMono8, unsigned char** ppucCenterMono8, TriclopsInput* pShortInput, TriclopsInput* pWideInput )
+extractImagesMonoXB3	pgr_stereocam.h	/^extractImagesMonoXB3( PGRStereoCamera_t* 	stereoCamera, $/;"	p	signature:( PGRStereoCamera_t* stereoCamera, unsigned char* pucDeInterleaved, unsigned char** ppucRightMono8, unsigned char** ppucLeftMono8, unsigned char** ppucCenterMono8, TriclopsInput* pShortInput, TriclopsInput* pWideInput )
+g_szBB2Base	pgr_stereocam.cpp	/^const char* g_szBB2Base = "Bumblebee2";$/;"	v
+g_szBB3Base	pgr_stereocam.cpp	/^const char* g_szBB3Base = "Bumblebee XB3";$/;"	v
+g_szBBBase	pgr_stereocam.cpp	/^const char* g_szBBBase 	= "BumbleBee";$/;"	v
+getBayerTile	pgr_registers.cpp	/^getBayerTile( dc1394camera_t* camera,$/;"	f	signature:( dc1394camera_t* camera, dc1394color_filter_t* bayerPattern )
+getBayerTile	pgr_registers.h	/^getBayerTile( dc1394camera_t* camera,$/;"	p	signature:( dc1394camera_t* camera, dc1394color_filter_t* bayerPattern )
+getCameraModel	pgr_stereocam.cpp	/^getCameraModel( dc1394camera_t* camera )$/;"	f	signature:( dc1394camera_t* camera )
+getCameraModel	pgr_stereocam.h	/^getCameraModel( dc1394camera_t* camera );$/;"	p	signature:( dc1394camera_t* camera )
+getSensorInfo	pgr_registers.cpp	/^getSensorInfo( dc1394camera_t* 	camera,$/;"	f	signature:( dc1394camera_t* camera, bool* pbColor, unsigned int* pnRows, unsigned int* pnCols )
+getSensorInfo	pgr_registers.h	/^getSensorInfo( dc1394camera_t* 	camera,$/;"	p	signature:( dc1394camera_t* camera, bool* pbColor, unsigned int* pnRows, unsigned int* pnCols )
+getTriclopsContextFromCamera	pgr_stereocam.cpp	/^getTriclopsContextFromCamera( PGRStereoCamera_t* stereoCamera,$/;"	f	signature:( PGRStereoCamera_t* stereoCamera, TriclopsContext* pTriclops )
+getTriclopsContextFromCamera	pgr_stereocam.h	/^getTriclopsContextFromCamera( PGRStereoCamera_t* camera,$/;"	p	signature:( PGRStereoCamera_t* camera, TriclopsContext* pTriclops )
+isBumblebee	pgr_stereocam.cpp	/^isBumblebee( dc1394camera_t* camera )$/;"	f	signature:( dc1394camera_t* camera )
+isBumblebee2	pgr_stereocam.cpp	/^isBumblebee2( dc1394camera_t* camera )$/;"	f	signature:( dc1394camera_t* camera )
+isBumblebeeXB3	pgr_stereocam.cpp	/^isBumblebeeXB3( dc1394camera_t* camera )$/;"	f	signature:( dc1394camera_t* camera )
+isStereoCamera	pgr_stereocam.cpp	/^bool isStereoCamera( dc1394camera_t* camera )$/;"	f	signature:( dc1394camera_t* camera )
+isStereoCamera	pgr_stereocam.h	/^isStereoCamera( dc1394camera_t* camera );$/;"	p	signature:( dc1394camera_t* camera )
+model	pgr_stereocam.h	/^      PGRStereoCameraModel_t	model;$/;"	m	struct:__anon2	access:public
+nBytesPerPixel	pgr_stereocam.h	/^      unsigned int		nBytesPerPixel;$/;"	m	struct:__anon2	access:public
+nCols	pgr_stereocam.h	/^      unsigned int		nCols;$/;"	m	struct:__anon2	access:public
+nRows	pgr_stereocam.h	/^      unsigned int		nRows;$/;"	m	struct:__anon2	access:public
+queryStereoCamera	pgr_stereocam.cpp	/^queryStereoCamera( dc1394camera_t* 	camera,$/;"	f	signature:( dc1394camera_t* camera, PGRStereoCamera_t* stereoCamera )
+queryStereoCamera	pgr_stereocam.h	/^queryStereoCamera( dc1394camera_t* 	camera,$/;"	p	signature:( dc1394camera_t* camera, PGRStereoCamera_t * stereoCamera )
+setEndian	pgr_registers.cpp	/^setEndian( dc1394camera_t* camera,$/;"	f	signature:( dc1394camera_t* camera, bool bBigEndian )
+setEndian	pgr_registers.h	/^setEndian( dc1394camera_t* camera,$/;"	p	signature:( dc1394camera_t* camera, bool bBigEndian )
+setStereoVideoCapture	pgr_stereocam.cpp	/^setStereoVideoCapture( PGRStereoCamera_t* stereoCamera )$/;"	f	signature:( PGRStereoCamera_t* stereoCamera )
+setStereoVideoCapture	pgr_stereocam.h	/^setStereoVideoCapture( PGRStereoCamera_t* stereoCamera );$/;"	p	signature:( PGRStereoCamera_t* stereoCamera )
+startTransmission	pgr_stereocam.cpp	/^startTransmission( PGRStereoCamera_t* stereoCamera )$/;"	f	signature:( PGRStereoCamera_t* stereoCamera )
+startTransmission	pgr_stereocam.h	/^startTransmission( PGRStereoCamera_t* stereoCamera );$/;"	p	signature:( PGRStereoCamera_t* stereoCamera )
+writeTriclopsConfigFromCameraToFile	pgr_stereocam.cpp	/^writeTriclopsConfigFromCameraToFile( dc1394camera_t* camera,$/;"	f	signature:( dc1394camera_t* camera, const char* outputFile)
