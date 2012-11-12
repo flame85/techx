@@ -4,13 +4,45 @@
 #include <GL/glut.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <cmath>
 
-MyGLWidget::MyGLWidget(QWidget *parent) : QGLWidget(parent) {
+
+const double pi= 3.14159265358979323846;
+static void qNormalizeAngle(int &angle) {
+    while (angle < 0)
+        angle += 360 * 16;
+    while (angle > 360 * 16)
+        angle -= 360 * 16;
+}
+MyGLWidget::MyGLWidget(QWidget *parent) 
+: QGLWidget(parent),
+  xRot(180*16.0),
+  yRot(0),
+  zRot(0),
+  xTra(0),
+  yTra(0),
+  zTra(-500)
+{
    setMouseTracking(true);
-    //glutInit(&argc,argv);
 }
 
 void MyGLWidget::initializeGL() {
+    //glClearColor(0,0,0,0); 
+    glEnable (GL_BLEND); 
+    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+    //glShadeModel(GL_SMOOTH);
+    //glEnable(GL_LIGHTING);
+    //glEnable(GL_LIGHT0);
+    //glEnable(GL_MULTISAMPLE);
+    //gluPerspective(99.0/180.0*pi, 1.00, 0.01, 1e9); //1.38 = tan(57/2°)/tan(43/2°)
+    ////gluLookAt(0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 1.0, 0.0);
+    //static GLfloat lightPosition[4] = { 0.5, 5.0, 7.0, 1.0 };
+    //glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+}
+
+/*void MyGLWidget::initializeGL() {
    glDisable(GL_TEXTURE_2D);
    glDisable(GL_DEPTH_TEST);
    glDisable(GL_COLOR_MATERIAL);
@@ -19,31 +51,93 @@ void MyGLWidget::initializeGL() {
    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
    glClearColor(0, 0, 0, 0);
    printf("initializedGL\n");
-}
+}*/
 void MyGLWidget::resizeGL(int w, int h){
    glViewport(0, 0, w, h);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   gluOrtho2D(0, w, 0, h); // set origin to bottom left corner
-   glMatrixMode(GL_MODELVIEW);
-   glLoadIdentity();
-   printf("resizeGL\n");
+//#ifdef QT_OPENGL_ES_1
+//    glOrthof(-0.5, +0.5, -0.5, +0.5, 1.0, 15.0);
+//#else
+//    glOrtho(-0.5, +0.5, -0.5, +0.5, 1.0, 15.0);
+//#endif
+    //gluPerspective(57.0/180.0*pi, 1.38, 0.01, 1e9); //1.38 = tan(57/2°)/tan(43/2°) as kinect has viewing angles 57 and 43
+    float ratio = (float)w / (float) h;
+    gluPerspective(pi/4.0, ratio, 0.1, 1e4); 
+    glMatrixMode(GL_MODELVIEW);
 }
 
 void MyGLWidget::paintGL() {
-   glClear(GL_COLOR_BUFFER_BIT);
-   glColor3f(1,0,0);
+  if(!this->isVisible()) 
+    return;
+   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   glLoadIdentity();
+    //Camera transformation
+    glTranslatef(xTra, yTra, zTra);
+    glRotatef(xRot / 16.0, 1.0, 0.0, 0.0);
+    glRotatef(yRot / 16.0, 0.0, 1.0, 0.0);
+    glRotatef(zRot / 16.0, 0.0, 0.0, 1.0);
+  /* glColor3f(1,0,0);
    glBegin(GL_POLYGON);
    glVertex2f(0,0);
    glVertex2f(100,500);
    glVertex2f(500,100);
-   glEnd();
-   printf("paintGL\n");
+   glEnd();*/
+    drawPose(0.15);
+   drawAxis(200);
+   //drawCoil();
+   //drawPose(100);
 }
 
+void MyGLWidget::drawTraject()
+{
+  for(int i = 0; i<pose_matrices->size(); i++){
+     glPushMatrix();
+     glMultMatrixd(static_cast<GLdouble*>( (*pose_matrices)[i].data() ));
+       //works as long as qreal and GLdouble are typedefs to double (might depend on hardware)
+     drawPose(0.15);
+     glPopMatrix();
+  }
+}
+// Shape For Debuging 
+void MyGLWidget::drawCoil() {
+    const float nbSteps = 200.0;
+    glBegin(GL_QUAD_STRIP);
+    for (int i=0; i<nbSteps; ++i) {
+        const float ratio = i/nbSteps;
+        const float angle = 21.0*ratio;
+        const float c = cos(angle);
+        const float s = sin(angle);
+        const float r1 = 1.0 - 0.8f*ratio;
+        const float r2 = 0.8f - 0.8f*ratio;
+        const float alt = ratio - 0.5f;
+        const float nor = 0.5f;
+        const float up = sqrt(1.0-nor*nor);
+        glColor3f(1.0-ratio, 0.2f , ratio);
+        glNormal3f(nor*c, up, nor*s);
+        glVertex3f(r1*c, alt, r1*s+2);
+        glVertex3f(r2*c, alt+0.05f, r2*s+2); }
+    glEnd();
+}
+
+void MyGLWidget::drawPose(float scale){
+    glBegin(GL_LINES);
+    glColor4f (1, 0, 0, 1.0);
+    glVertex3f(0, 0, 0);
+    glColor4f (1, 0, 0, 0.0);
+    glVertex3f(scale, 0, 0);
+    glColor4f (0, 1, 0, 1.0);
+    glVertex3f(0, 0, 0);
+    glColor4f (0, 1, 0, 0.0);
+    glVertex3f(0, scale, 0);
+    glColor4f (0, 0, 1, 1.0);
+    glVertex3f(0, 0, 0);
+    glColor4f (0, 0, 1, 0.0);
+    glVertex3f(0, 0, scale);
+    glEnd();
+}
 void MyGLWidget::drawAxis(int scale)
 {
-   printf("draw axies\n");
    int nScale = -1 * scale;
     glBegin(GL_LINES);
     glColor4f (1, 0, 0, 1.0);
@@ -97,9 +191,34 @@ void MyGLWidget::drawAxis(int scale)
 }
 
 void MyGLWidget::mousePressEvent(QMouseEvent *event) {
-}
-void MyGLWidget::mouseMoveEvent(QMouseEvent *event) {
+    lastPos = event->pos();
    printf("%d, %d\n", event->x(), event->y());
+}
+
+void MyGLWidget::wheelEvent(QWheelEvent *event) {
+    zTra += ((float)event->delta())/10.0; 
+    updateGL();
+}
+
+/*void MyGLWidget::mouseMoveEvent(QMouseEvent *event) {
+   //printf("%d, %d\n", event->x(), event->y());
+}*/
+void MyGLWidget::mouseMoveEvent(QMouseEvent *event) {//TODO: consolidate setRotation methods
+    int dx = event->x() - lastPos.x();
+    int dy = event->y() - lastPos.y();
+
+    if (event->buttons() & Qt::LeftButton) {
+        setXRotation(xRot - 8 * dy);
+        setYRotation(yRot + 8 * dx);
+    } else if (event->buttons() & Qt::RightButton) {
+        setXRotation(xRot - 8 * dy);
+        setZRotation(zRot + 8 * dx);
+    } else if (event->buttons() & Qt::MidButton) {
+        xTra += dx/200.0;
+        yTra -= dy/200.0;
+        updateGL();
+    }
+    lastPos = event->pos();
 }
 
 void MyGLWidget::keyPressEvent(QKeyEvent* event) {
@@ -111,4 +230,29 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event) {
          event->ignore();
          break;
    }
+}
+
+void MyGLWidget::setXRotation(int angle) { 
+    qNormalizeAngle(angle);
+    if (angle != xRot) {
+        xRot = angle;
+        updateGL();
+    }
+}
+
+
+void MyGLWidget::setYRotation(int angle) {
+    qNormalizeAngle(angle);
+    if (angle != yRot) {
+        yRot = angle;
+        updateGL();
+    }
+}
+
+void MyGLWidget::setZRotation(int angle) {
+    qNormalizeAngle(angle);
+    if (angle != zRot) {
+        zRot = angle;
+        updateGL();
+    }
 }

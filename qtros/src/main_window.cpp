@@ -14,6 +14,7 @@
 #include <cmath>
 #include <QMessageBox>
 #include <iostream>
+#include <GL/glut.h>
 #include "../include/qtros/main_window.hpp"
 
 /*****************************************************************************
@@ -32,6 +33,8 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
 	: QMainWindow(parent)
 	, qnode(argc,argv)
 {
+    glutInit(&argc,argv);
+
 	ui.setupUi(this); // Calling this incidentally connects all ui's triggers to on_...() callbacks in this class.
     QObject::connect(ui.actionAbout_Qt, SIGNAL(triggered(bool)), qApp, SLOT(aboutQt())); // qApp is a global variable for the application
 
