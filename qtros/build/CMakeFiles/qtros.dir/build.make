@@ -53,7 +53,6 @@ CMakeFiles/qtros.dir/src/myGLWidget.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/src/myGLWidget.o: ../src/myGLWidget.cpp
 CMakeFiles/qtros.dir/src/myGLWidget.o: ../manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/ros/core/roslang/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
@@ -66,21 +65,54 @@ CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/r
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/bullet/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
 CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/myGLWidget.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/src/myGLWidget.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/myGLWidget.o -c /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/myGLWidget.o -c /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp
 
 CMakeFiles/qtros.dir/src/myGLWidget.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/src/myGLWidget.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp > CMakeFiles/qtros.dir/src/myGLWidget.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp > CMakeFiles/qtros.dir/src/myGLWidget.i
 
 CMakeFiles/qtros.dir/src/myGLWidget.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/src/myGLWidget.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp -o CMakeFiles/qtros.dir/src/myGLWidget.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/myGLWidget.cpp -o CMakeFiles/qtros.dir/src/myGLWidget.s
 
 CMakeFiles/qtros.dir/src/myGLWidget.o.requires:
 .PHONY : CMakeFiles/qtros.dir/src/myGLWidget.o.requires
@@ -95,7 +127,6 @@ CMakeFiles/qtros.dir/src/main_window.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/src/main_window.o: ../src/main_window.cpp
 CMakeFiles/qtros.dir/src/main_window.o: ../manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/ros/core/roslang/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
@@ -108,21 +139,54 @@ CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/bullet/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
 CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main_window.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/src/main_window.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/main_window.o -c /home/mou/myProject/ROS/qtros/src/main_window.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/main_window.o -c /home/mou/myProject/ROS/qtros/src/main_window.cpp
 
 CMakeFiles/qtros.dir/src/main_window.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/src/main_window.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/main_window.cpp > CMakeFiles/qtros.dir/src/main_window.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/main_window.cpp > CMakeFiles/qtros.dir/src/main_window.i
 
 CMakeFiles/qtros.dir/src/main_window.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/src/main_window.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/main_window.cpp -o CMakeFiles/qtros.dir/src/main_window.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/main_window.cpp -o CMakeFiles/qtros.dir/src/main_window.s
 
 CMakeFiles/qtros.dir/src/main_window.o.requires:
 .PHONY : CMakeFiles/qtros.dir/src/main_window.o.requires
@@ -137,7 +201,6 @@ CMakeFiles/qtros.dir/src/main.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/src/main.o: ../src/main.cpp
 CMakeFiles/qtros.dir/src/main.o: ../manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/ros/core/roslang/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
@@ -150,21 +213,54 @@ CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/roscons
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/bullet/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
 CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/main.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/src/main.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/main.o -c /home/mou/myProject/ROS/qtros/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/main.o -c /home/mou/myProject/ROS/qtros/src/main.cpp
 
 CMakeFiles/qtros.dir/src/main.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/src/main.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/main.cpp > CMakeFiles/qtros.dir/src/main.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/main.cpp > CMakeFiles/qtros.dir/src/main.i
 
 CMakeFiles/qtros.dir/src/main.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/src/main.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/main.cpp -o CMakeFiles/qtros.dir/src/main.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/main.cpp -o CMakeFiles/qtros.dir/src/main.s
 
 CMakeFiles/qtros.dir/src/main.o.requires:
 .PHONY : CMakeFiles/qtros.dir/src/main.o.requires
@@ -179,7 +275,6 @@ CMakeFiles/qtros.dir/src/qnode.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/src/qnode.o: ../src/qnode.cpp
 CMakeFiles/qtros.dir/src/qnode.o: ../manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/ros/core/rosbuild/manifest.xml
-CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/ros/core/roslang/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/utilities/cpp_common/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/manifest.xml
@@ -192,21 +287,54 @@ CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/roscon
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/clients/rospy/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/ros/tools/rosclean/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosgraph/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosparam/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosmaster/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosout/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/roslaunch/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/ros/tools/rosunit/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rostest/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosbag/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosbagmigration/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/bullet/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/geometry/angles/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosnode/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosmsg/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rostopic/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/rosservice/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/utilities/roswtf/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/utilities/message_filters/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/geometry/tf/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/qt_ros/qt_build/manifest.xml
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/manifest.xml
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/generated
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/generated
 CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/geometry/tf/msg_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/generated
+CMakeFiles/qtros.dir/src/qnode.o: /opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/src/qnode.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/qnode.o -c /home/mou/myProject/ROS/qtros/src/qnode.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/src/qnode.o -c /home/mou/myProject/ROS/qtros/src/qnode.cpp
 
 CMakeFiles/qtros.dir/src/qnode.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/src/qnode.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/qnode.cpp > CMakeFiles/qtros.dir/src/qnode.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/src/qnode.cpp > CMakeFiles/qtros.dir/src/qnode.i
 
 CMakeFiles/qtros.dir/src/qnode.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/src/qnode.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/qnode.cpp -o CMakeFiles/qtros.dir/src/qnode.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/src/qnode.cpp -o CMakeFiles/qtros.dir/src/qnode.s
 
 CMakeFiles/qtros.dir/src/qnode.o.requires:
 .PHONY : CMakeFiles/qtros.dir/src/qnode.o.requires
@@ -221,15 +349,15 @@ CMakeFiles/qtros.dir/qrc_images.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/qrc_images.o: qrc_images.cxx
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/qrc_images.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/qrc_images.o -c /home/mou/myProject/ROS/qtros/build/qrc_images.cxx
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/qrc_images.o -c /home/mou/myProject/ROS/qtros/build/qrc_images.cxx
 
 CMakeFiles/qtros.dir/qrc_images.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/qrc_images.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/qrc_images.cxx > CMakeFiles/qtros.dir/qrc_images.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/qrc_images.cxx > CMakeFiles/qtros.dir/qrc_images.i
 
 CMakeFiles/qtros.dir/qrc_images.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/qrc_images.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/qrc_images.cxx -o CMakeFiles/qtros.dir/qrc_images.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/qrc_images.cxx -o CMakeFiles/qtros.dir/qrc_images.s
 
 CMakeFiles/qtros.dir/qrc_images.o.requires:
 .PHONY : CMakeFiles/qtros.dir/qrc_images.o.requires
@@ -244,15 +372,15 @@ CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o: CMakeFiles/qtros.dir/flags.
 CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o: include/qtros/moc_myGLWidget.cxx
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx
 
 CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx > CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx > CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.i
 
 CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.s
 
 CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o.requires:
 .PHONY : CMakeFiles/qtros.dir/include/qtros/moc_myGLWidget.o.requires
@@ -267,15 +395,15 @@ CMakeFiles/qtros.dir/include/qtros/moc_qnode.o: CMakeFiles/qtros.dir/flags.make
 CMakeFiles/qtros.dir/include/qtros/moc_qnode.o: include/qtros/moc_qnode.cxx
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/include/qtros/moc_qnode.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_qnode.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_qnode.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx
 
 CMakeFiles/qtros.dir/include/qtros/moc_qnode.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/include/qtros/moc_qnode.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx > CMakeFiles/qtros.dir/include/qtros/moc_qnode.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx > CMakeFiles/qtros.dir/include/qtros/moc_qnode.i
 
 CMakeFiles/qtros.dir/include/qtros/moc_qnode.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/include/qtros/moc_qnode.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_qnode.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_qnode.s
 
 CMakeFiles/qtros.dir/include/qtros/moc_qnode.o.requires:
 .PHONY : CMakeFiles/qtros.dir/include/qtros/moc_qnode.o.requires
@@ -290,15 +418,15 @@ CMakeFiles/qtros.dir/include/qtros/moc_main_window.o: CMakeFiles/qtros.dir/flags
 CMakeFiles/qtros.dir/include/qtros/moc_main_window.o: include/qtros/moc_main_window.cxx
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/qtros.dir/include/qtros/moc_main_window.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_main_window.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/qtros.dir/include/qtros/moc_main_window.o -c /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx
 
 CMakeFiles/qtros.dir/include/qtros/moc_main_window.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtros.dir/include/qtros/moc_main_window.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx > CMakeFiles/qtros.dir/include/qtros/moc_main_window.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx > CMakeFiles/qtros.dir/include/qtros/moc_main_window.i
 
 CMakeFiles/qtros.dir/include/qtros/moc_main_window.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtros.dir/include/qtros/moc_main_window.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_main_window.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx -o CMakeFiles/qtros.dir/include/qtros/moc_main_window.s
 
 CMakeFiles/qtros.dir/include/qtros/moc_main_window.o.requires:
 .PHONY : CMakeFiles/qtros.dir/include/qtros/moc_main_window.o.requires
@@ -324,17 +452,17 @@ ui_main_window.h: ../ui/main_window.ui
 include/qtros/moc_myGLWidget.cxx: ../include/qtros/myGLWidget.hpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating include/qtros/moc_myGLWidget.cxx"
-	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx /home/mou/myProject/ROS/qtros/include/qtros/myGLWidget.hpp
+	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/geometry/tf/include -I/opt/ros/electric/stacks/geometry/tf/msg_gen/cpp/include -I/opt/ros/electric/stacks/geometry/tf/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/bullet/include -I/opt/ros/electric/stacks/geometry/angles/include -I/opt/ros/electric/stacks/ros_comm/utilities/message_filters/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rosbag/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rostest/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_myGLWidget.cxx /home/mou/myProject/ROS/qtros/include/qtros/myGLWidget.hpp
 
 include/qtros/moc_qnode.cxx: ../include/qtros/qnode.hpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating include/qtros/moc_qnode.cxx"
-	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx /home/mou/myProject/ROS/qtros/include/qtros/qnode.hpp
+	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/geometry/tf/include -I/opt/ros/electric/stacks/geometry/tf/msg_gen/cpp/include -I/opt/ros/electric/stacks/geometry/tf/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/bullet/include -I/opt/ros/electric/stacks/geometry/angles/include -I/opt/ros/electric/stacks/ros_comm/utilities/message_filters/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rosbag/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rostest/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_qnode.cxx /home/mou/myProject/ROS/qtros/include/qtros/qnode.hpp
 
 include/qtros/moc_main_window.cxx: ../include/qtros/main_window.hpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mou/myProject/ROS/qtros/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating include/qtros/moc_main_window.cxx"
-	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx /home/mou/myProject/ROS/qtros/include/qtros/main_window.hpp
+	/usr/bin/moc-qt4 -I/home/mou/myProject/ROS/qtros/include -I/opt/ros/electric/stacks/geometry/tf/include -I/opt/ros/electric/stacks/geometry/tf/msg_gen/cpp/include -I/opt/ros/electric/stacks/geometry/tf/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/sensor_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/bullet/include -I/opt/ros/electric/stacks/geometry/angles/include -I/opt/ros/electric/stacks/ros_comm/utilities/message_filters/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/nav_msgs/srv_gen/cpp/include -I/opt/ros/electric/stacks/common_msgs/geometry_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rosbag/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/include -I/opt/ros/electric/stacks/ros_comm/tools/topic_tools/srv_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/tools/rostest/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_serialization/include -I/opt/ros/electric/stacks/ros_comm/clients/cpp/roscpp_traits/include -I/opt/ros/electric/stacks/ros_comm/utilities/xmlrpcpp/src -I/opt/ros/electric/stacks/ros_comm/tools/rosconsole/include -I/opt/ros/electric/stacks/ros_comm/utilities/rostime/include -I/opt/ros/electric/stacks/ros_comm/utilities/cpp_common/include -I/opt/ros/electric/stacks/ros_comm/messages/rosgraph_msgs/msg_gen/cpp/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/include -I/opt/ros/electric/stacks/ros_comm/messages/std_msgs/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/msg_gen/cpp/include -I/opt/ros/electric/ros/core/roslib/include -I/opt/ros/electric/ros/tools/rospack -I/opt/ros/electric/ros/tools/rospack/include -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/home/mou/myProject/ROS/qtros/build -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXml -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -o /home/mou/myProject/ROS/qtros/build/include/qtros/moc_main_window.cxx /home/mou/myProject/ROS/qtros/include/qtros/main_window.hpp
 
 # Object files for target qtros
 qtros_OBJECTS = \

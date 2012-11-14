@@ -13,12 +13,18 @@
   <rosdep name="qt4"/>
 
   <!-- rosbuild1 -->
+  <depend package="tf"/>
   <depend package="qt_build"/>
+  <depend package="roscpp"/>
+  <depend package="nav_msgs"/>
   <depend package="roscpp"/>
   
   <rosbuild2>
+  <depend package="tf"/>
     <depend package="qt_build"/>
     <depend package="roscpp"/>
+  <depend package="nav_msgs"/>
+  <depend package="roscpp"/>
   </rosbuild2>
   
 </package>

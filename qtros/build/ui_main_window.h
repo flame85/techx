@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'main_window.ui'
 **
-** Created: Mon Nov 12 13:52:48 2012
+** Created: Wed Nov 14 10:51:29 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -79,6 +79,7 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *button_connect;
     QSpacerItem *verticalSpacer_3;
+    QPushButton *resetButton;
     QPushButton *quit_button;
 
     void setupUi(QMainWindow *MainWindowDesign)
@@ -173,8 +174,19 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(dock_status->sizePolicy().hasHeightForWidth());
         dock_status->setSizePolicy(sizePolicy1);
-        dock_status->setMinimumSize(QSize(325, 395));
+        dock_status->setMinimumSize(QSize(325, 428));
+#ifndef QT_NO_TOOLTIP
+        dock_status->setToolTip(QString::fromUtf8(""));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_STATUSTIP
+        dock_status->setStatusTip(QString::fromUtf8(""));
+#endif // QT_NO_STATUSTIP
+#ifndef QT_NO_WHATSTHIS
+        dock_status->setWhatsThis(QString::fromUtf8(""));
+#endif // QT_NO_WHATSTHIS
+        dock_status->setFeatures(QDockWidget::NoDockWidgetFeatures);
         dock_status->setAllowedAreas(Qt::RightDockWidgetArea);
+        dock_status->setWindowTitle(QString::fromUtf8("Command Panel"));
         dockWidgetContents_2 = new QWidget();
         dockWidgetContents_2->setObjectName(QString::fromUtf8("dockWidgetContents_2"));
         verticalLayout = new QVBoxLayout(dockWidgetContents_2);
@@ -265,6 +277,13 @@ public:
 
         verticalLayout->addWidget(frame);
 
+        resetButton = new QPushButton(dockWidgetContents_2);
+        resetButton->setObjectName(QString::fromUtf8("resetButton"));
+        sizePolicy2.setHeightForWidth(resetButton->sizePolicy().hasHeightForWidth());
+        resetButton->setSizePolicy(sizePolicy2);
+
+        verticalLayout->addWidget(resetButton);
+
         quit_button = new QPushButton(dockWidgetContents_2);
         quit_button->setObjectName(QString::fromUtf8("quit_button"));
         sizePolicy2.setHeightForWidth(quit_button->sizePolicy().hasHeightForWidth());
@@ -274,6 +293,15 @@ public:
 
         dock_status->setWidget(dockWidgetContents_2);
         MainWindowDesign->addDockWidget(static_cast<Qt::DockWidgetArea>(2), dock_status);
+        QWidget::setTabOrder(line_edit_master, line_edit_host);
+        QWidget::setTabOrder(line_edit_host, view_logging);
+        QWidget::setTabOrder(view_logging, line_edit_topic);
+        QWidget::setTabOrder(line_edit_topic, checkbox_use_environment);
+        QWidget::setTabOrder(checkbox_use_environment, quit_button);
+        QWidget::setTabOrder(quit_button, checkbox_remember_settings);
+        QWidget::setTabOrder(checkbox_remember_settings, button_connect);
+        QWidget::setTabOrder(button_connect, tab_manager);
+        QWidget::setTabOrder(tab_manager, resetButton);
 
         menubar->addAction(menu_File->menuAction());
         menu_File->addAction(action_Preferences);
@@ -286,6 +314,7 @@ public:
         retranslateUi(MainWindowDesign);
         QObject::connect(action_Quit, SIGNAL(triggered()), MainWindowDesign, SLOT(close()));
         QObject::connect(quit_button, SIGNAL(clicked()), MainWindowDesign, SLOT(close()));
+        QObject::connect(resetButton, SIGNAL(clicked()), glwidget, SLOT(resetRobotPose()));
 
         tab_manager->setCurrentIndex(1);
 
@@ -306,7 +335,6 @@ public:
         groupBox_2->setTitle(QApplication::translate("MainWindowDesign", "Robot position", 0, QApplication::UnicodeUTF8));
         tab_manager->setTabText(tab_manager->indexOf(pose_tab), QApplication::translate("MainWindowDesign", "robot_pose", 0, QApplication::UnicodeUTF8));
         menu_File->setTitle(QApplication::translate("MainWindowDesign", "&App", 0, QApplication::UnicodeUTF8));
-        dock_status->setWindowTitle(QApplication::translate("MainWindowDesign", "Command Panel", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("MainWindowDesign", "Ros Master", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindowDesign", "Ros Master Url", 0, QApplication::UnicodeUTF8));
         line_edit_master->setText(QApplication::translate("MainWindowDesign", "http://192.168.1.2:11311/", 0, QApplication::UnicodeUTF8));
@@ -323,6 +351,7 @@ public:
         button_connect->setStatusTip(QApplication::translate("MainWindowDesign", "Clear all waypoints and set the target to the current joint trajectory state.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_STATUSTIP
         button_connect->setText(QApplication::translate("MainWindowDesign", "Connect", 0, QApplication::UnicodeUTF8));
+        resetButton->setText(QApplication::translate("MainWindowDesign", "reset robot position", 0, QApplication::UnicodeUTF8));
         quit_button->setText(QApplication::translate("MainWindowDesign", "Quit", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

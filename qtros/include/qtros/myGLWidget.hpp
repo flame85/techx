@@ -11,6 +11,10 @@ class MyGLWidget : public QGLWidget {
 public:
     MyGLWidget(QWidget *parent = NULL);
 
+public slots:
+    void resetRobotPose();
+    void addTransform(QMatrix4x4 transform);
+
 protected:
     void initializeGL();
     void resizeGL(int w, int h);
@@ -30,7 +34,7 @@ private:
     int xRot, yRot, zRot;
     float xTra, yTra, zTra;
     QPoint lastPos;
-    QList<QMatrix4x4>* pose_matrices;
+    QList<QMatrix4x4> pose_matrices;
 };
 
 #endif  /* _GLWIDGET_H */

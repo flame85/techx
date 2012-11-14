@@ -138,14 +138,26 @@
    <property name="minimumSize">
     <size>
      <width>325</width>
-     <height>395</height>
+     <height>428</height>
     </size>
+   </property>
+   <property name="toolTip">
+    <string notr="true"/>
+   </property>
+   <property name="statusTip">
+    <string notr="true"/>
+   </property>
+   <property name="whatsThis">
+    <string notr="true"/>
+   </property>
+   <property name="features">
+    <set>QDockWidget::NoDockWidgetFeatures</set>
    </property>
    <property name="allowedAreas">
     <set>Qt::RightDockWidgetArea</set>
    </property>
    <property name="windowTitle">
-    <string>Command Panel</string>
+    <string notr="true">Command Panel</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
@@ -311,6 +323,19 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="resetButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>reset robot position</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="quit_button">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -359,8 +384,23 @@
    <extends>QWidget</extends>
    <header>../include/qtros/myGLWidget.hpp</header>
    <container>1</container>
+   <slots>
+    <slot>resetRobotPose()</slot>
+   </slots>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>line_edit_master</tabstop>
+  <tabstop>line_edit_host</tabstop>
+  <tabstop>view_logging</tabstop>
+  <tabstop>line_edit_topic</tabstop>
+  <tabstop>checkbox_use_environment</tabstop>
+  <tabstop>quit_button</tabstop>
+  <tabstop>checkbox_remember_settings</tabstop>
+  <tabstop>button_connect</tabstop>
+  <tabstop>tab_manager</tabstop>
+  <tabstop>resetButton</tabstop>
+ </tabstops>
  <resources>
   <include location="../resources/images.qrc"/>
  </resources>
@@ -388,12 +428,28 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>859</x>
-     <y>552</y>
+     <x>802</x>
+     <y>672</y>
     </hint>
     <hint type="destinationlabel">
      <x>469</x>
      <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetButton</sender>
+   <signal>clicked()</signal>
+   <receiver>glwidget</receiver>
+   <slot>resetRobotPose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>422</y>
     </hint>
    </hints>
   </connection>

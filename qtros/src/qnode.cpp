@@ -16,21 +16,26 @@
 #include <std_msgs/String.h>
 #include <sstream>
 #include "../include/qtros/qnode.hpp"
+#include "std_msgs/Float64MultiArray.h"
+//#include <tf/transform_broadcaster.h>
+//#include <tf/transform_listener.h>
+
+static const std::string topic_name = "/stereo_odometer/odometry";
 
 /*****************************************************************************
 ** Namespaces
 *****************************************************************************/
 
-namespace qtros {
 
 /*****************************************************************************
 ** Implementation
 *****************************************************************************/
-
 QNode::QNode(int argc, char** argv ) :
 	init_argc(argc),
 	init_argv(argv)
-	{}
+	{
+          gltransform = new btScalar[16];
+        }
 
 QNode::~QNode() {
     if(ros::isStarted()) {
@@ -38,6 +43,7 @@ QNode::~QNode() {
       ros::waitForShutdown();
     }
 	wait();
+        delete[] gltransform;
 }
 
 bool QNode::init() {
@@ -45,10 +51,13 @@ bool QNode::init() {
 	if ( ! ros::master::check() ) {
 		return false;
 	}
+        printf("default init\n");
 	ros::start(); // explicitly needed since our nodehandle is going out of scope.
 	ros::NodeHandle n;
 	// Add your ros communications here.
-	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+	//chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+        sub = n.subscribe(topic_name, 1, &QNode::vodomCallback, this);
+        printf("subscribe to topic %s\n", topic_name.c_str());
 	start();
 	return true;
 }
@@ -61,17 +70,59 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	if ( ! ros::master::check() ) {
 		return false;
 	}
-	ros::start(); // explicitly needed since our nodehandle is going out of scope.
+	//ros::start(); // explicitly needed since our nodehandle is going out of scope.
 	ros::NodeHandle n;
 	// Add your ros communications here.
-	chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
-	start();
+	//chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
+        sub = n.subscribe(topic_name, 1, &QNode::vodomCallback, this);
+	//start();
 	return true;
 }
 
+void QNode::vodomCallback(const nav_msgs::OdometryConstPtr& odoMsg)
+{
+   printf("odometry listener: my position: (%lf %lf), orientation (%lf)\n", \
+       odoMsg->pose.pose.position.x, odoMsg->pose.pose.position.y, odoMsg->pose.pose.orientation.z);
+   const geometry_msgs::Pose& msg = odoMsg->pose.pose;
+   btTransform transf = Transform(Quaternion(msg.orientation.x, msg.orientation.y, msg.orientation.z, msg.orientation.w), 
+                                  Vector3(msg.position.x, msg.position.y, msg.position.z));
+   transf.getOpenGLMatrix(gltransform);
+   //printf("size of trans is %d\n", sizeof(gltransform) / sizeof(double));
+   QMatrix4x4 transform(static_cast<qreal*>(gltransform));
+   /*transform(0,3) = transform(3,0);
+   transform(1,3) = transform(3,1);
+   transform(2,3) = transform(3,2);
+   transform(3,0) = 0.;
+   transform(3,1) = 0.;
+   transform(3,2) = 0.;*/
+   //transform = transform.transposed();
+   emit addTransform(transform);
+
+   /*for(int i = 0; i < 16; i++)
+   {
+     printf("%lf ", gltransform[i]);
+   }*/
+
+   /*printf("qmatrix is \n");
+   for(int i = 0; i < 4; ++i)
+   {
+     for(int j = 0; j <4; ++j)
+     {
+       printf("%lf ", transform(i,j));
+     }
+     printf("\n");
+   }*/
+}
+
 void QNode::run() {
-	ros::Rate loop_rate(1);
-	int count = 0;
+  ros::Rate r(10); // 10 hz. 
+  while(ros::ok() ) {
+
+    ros::spinOnce(); 
+    r.sleep();
+  }
+  emit rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
+	/*ros::Rate loop_rate(1);
 	while ( ros::ok() ) {
 
 		std_msgs::String msg;
@@ -84,8 +135,10 @@ void QNode::run() {
 		loop_rate.sleep();
 		++count;
 	}
-	std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
-	emit rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
+	std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;*/
+  //printf("run\n");
+  //ros::spin();
+	//emit rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
 }
 
 
@@ -124,4 +177,3 @@ void QNode::log( const LogLevel &level, const std::string &msg) {
 	emit loggingUpdated(); // used to readjust the scrollbar
 }
 
-}  // namespace qtros

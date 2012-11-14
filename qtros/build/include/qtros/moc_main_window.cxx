@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'main_window.hpp'
 **
-** Created: Mon Nov 12 13:52:48 2012
+** Created: Wed Nov 14 17:54:32 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_qtros__MainWindow[] = {
+static const uint qt_meta_data_MainWindow[] = {
 
  // content:
        5,       // revision
@@ -31,44 +31,44 @@ static const uint qt_meta_data_qtros__MainWindow[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      19,   18,   18,   18, 0x0a,
-      52,   46,   18,   18, 0x0a,
-      90,   84,   18,   18, 0x0a,
-     136,   18,   18,   18, 0x0a,
+      12,   11,   11,   11, 0x0a,
+      45,   39,   11,   11, 0x0a,
+      83,   77,   11,   11, 0x0a,
+     129,   11,   11,   11, 0x0a,
 
        0        // eod
 };
 
-static const char qt_meta_stringdata_qtros__MainWindow[] = {
-    "qtros::MainWindow\0\0on_actionAbout_triggered()\0"
+static const char qt_meta_stringdata_MainWindow[] = {
+    "MainWindow\0\0on_actionAbout_triggered()\0"
     "check\0on_button_connect_clicked(bool)\0"
     "state\0on_checkbox_use_environment_stateChanged(int)\0"
     "updateLoggingView()\0"
 };
 
-const QMetaObject qtros::MainWindow::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_qtros__MainWindow,
-      qt_meta_data_qtros__MainWindow, 0 }
+const QMetaObject MainWindow::staticMetaObject = {
+    { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow,
+      qt_meta_data_MainWindow, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &qtros::MainWindow::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *qtros::MainWindow::metaObject() const
+const QMetaObject *MainWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *qtros::MainWindow::qt_metacast(const char *_clname)
+void *MainWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_qtros__MainWindow))
+    if (!strcmp(_clname, qt_meta_stringdata_MainWindow))
         return static_cast<void*>(const_cast< MainWindow*>(this));
     return QMainWindow::qt_metacast(_clname);
 }
 
-int qtros::MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)

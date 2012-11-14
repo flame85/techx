@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <cmath>
 
-
 const double pi= 3.14159265358979323846;
 static void qNormalizeAngle(int &angle) {
     while (angle < 0)
@@ -21,7 +20,7 @@ MyGLWidget::MyGLWidget(QWidget *parent)
   zRot(0),
   xTra(0),
   yTra(0),
-  zTra(-500)
+  zTra(-200)
 {
    setMouseTracking(true);
 }
@@ -85,15 +84,17 @@ void MyGLWidget::paintGL() {
    glEnd();*/
     drawPose(0.15);
    drawAxis(200);
+   drawTraject();
    //drawCoil();
    //drawPose(100);
 }
 
 void MyGLWidget::drawTraject()
 {
-  for(int i = 0; i<pose_matrices->size(); i++){
+  printf("saved pose size is %d\n", pose_matrices.size());
+  for(int i = 0; i<pose_matrices.size(); i++){
      glPushMatrix();
-     glMultMatrixd(static_cast<GLdouble*>( (*pose_matrices)[i].data() ));
+     glMultMatrixd(static_cast<GLdouble*>( (pose_matrices)[i].data() ));
        //works as long as qreal and GLdouble are typedefs to double (might depend on hardware)
      drawPose(0.15);
      glPopMatrix();
@@ -255,4 +256,30 @@ void MyGLWidget::setZRotation(int angle) {
         zRot = angle;
         updateGL();
     }
+}
+
+void MyGLWidget::resetRobotPose() {
+  printf("reset button pressed\n");
+  xRot = 180*16.0;
+  yRot = 0;
+  zRot = 0;
+  xTra = 0;
+  yTra = 0;
+  zTra = -500;
+  pose_matrices.clear();
+  updateGL();
+}
+
+void MyGLWidget::addTransform(QMatrix4x4 transform){
+  printf("add transform received by glwidget\n");
+   pose_matrices.push_back(transform); //keep for later
+   for(int i = 0; i < 4; ++i)
+   {
+     for(int j = 0; j <4; ++j)
+     {
+       printf("%lf ", transform(i,j));
+     }
+     printf("\n");
+   }
+   updateGL();
 }

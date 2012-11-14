@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qnode.hpp'
 **
-** Created: Mon Nov 12 13:52:48 2012
+** Created: Wed Nov 14 19:23:30 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -17,54 +17,55 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_qtros__QNode[] = {
+static const uint qt_meta_data_QNode[] = {
 
  // content:
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
-      14,   13,   13,   13, 0x05,
-      31,   13,   13,   13, 0x05,
+       7,    6,    6,    6, 0x05,
+      24,    6,    6,    6, 0x05,
+      44,   38,    6,    6, 0x05,
 
        0        // eod
 };
 
-static const char qt_meta_stringdata_qtros__QNode[] = {
-    "qtros::QNode\0\0loggingUpdated()\0"
-    "rosShutdown()\0"
+static const char qt_meta_stringdata_QNode[] = {
+    "QNode\0\0loggingUpdated()\0rosShutdown()\0"
+    "trans\0addTransform(QMatrix4x4)\0"
 };
 
-const QMetaObject qtros::QNode::staticMetaObject = {
-    { &QThread::staticMetaObject, qt_meta_stringdata_qtros__QNode,
-      qt_meta_data_qtros__QNode, 0 }
+const QMetaObject QNode::staticMetaObject = {
+    { &QThread::staticMetaObject, qt_meta_stringdata_QNode,
+      qt_meta_data_QNode, 0 }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &qtros::QNode::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &QNode::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *qtros::QNode::metaObject() const
+const QMetaObject *QNode::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *qtros::QNode::qt_metacast(const char *_clname)
+void *QNode::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_qtros__QNode))
+    if (!strcmp(_clname, qt_meta_stringdata_QNode))
         return static_cast<void*>(const_cast< QNode*>(this));
     return QThread::qt_metacast(_clname);
 }
 
-int qtros::QNode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int QNode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QThread::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -73,22 +74,30 @@ int qtros::QNode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: loggingUpdated(); break;
         case 1: rosShutdown(); break;
+        case 2: addTransform((*reinterpret_cast< QMatrix4x4(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
 
 // SIGNAL 0
-void qtros::QNode::loggingUpdated()
+void QNode::loggingUpdated()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 
 // SIGNAL 1
-void qtros::QNode::rosShutdown()
+void QNode::rosShutdown()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, 0);
+}
+
+// SIGNAL 2
+void QNode::addTransform(QMatrix4x4 _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_END_MOC_NAMESPACE

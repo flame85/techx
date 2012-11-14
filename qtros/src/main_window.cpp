@@ -21,7 +21,6 @@
 ** Namespaces
 *****************************************************************************/
 
-namespace qtros {
 
 using namespace Qt;
 
@@ -48,6 +47,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
 	**********************/
 	ui.view_logging->setModel(qnode.loggingModel());
     QObject::connect(&qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
+    QObject::connect(&qnode, SIGNAL(addTransform(QMatrix4x4)), ui.glwidget, SLOT(addTransform(QMatrix4x4)));
 
     /*********************
     ** Auto Start
@@ -172,22 +172,5 @@ void MainWindow::closeEvent(QCloseEvent *event)
 	QMainWindow::closeEvent(event);
 }
 
-void MainWindow::initializeGL()
-{
-    //glClearColor(0,0,0,0); 
-    glEnable (GL_BLEND); 
-    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
-    //glShadeModel(GL_SMOOTH);
-    //glEnable(GL_LIGHTING);
-    //glEnable(GL_LIGHT0);
-    //glEnable(GL_MULTISAMPLE);
-    //gluPerspective(99.0/180.0*pi, 1.00, 0.01, 1e9); //1.38 = tan(57/2°)/tan(43/2°)
-    ////gluLookAt(0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 1.0, 0.0);
-    //static GLfloat lightPosition[4] = { 0.5, 5.0, 7.0, 1.0 };
-    //glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-}
 
-}  // namespace qtros
 

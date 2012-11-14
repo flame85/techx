@@ -20,7 +20,6 @@
 ** Namespace
 *****************************************************************************/
 
-namespace qtros {
 
 /*****************************************************************************
 ** Interface [MainWindow]
@@ -53,17 +52,11 @@ public slots:
     ** Manual connections
     *******************************************/
     void updateLoggingView(); // no idea why this can't connect automatically
-protected:
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int width, int height);
-    void drawAxis(int scale);
 
 private:
 	Ui::MainWindowDesign ui;
 	QNode qnode;
 };
 
-}  // namespace qtros
 
 #endif // qtros_MAIN_WINDOW_H
