@@ -13,14 +13,15 @@ static void qNormalizeAngle(int &angle) {
     while (angle > 360 * 16)
         angle -= 360 * 16;
 }
+
 MyGLWidget::MyGLWidget(QWidget *parent) 
 : QGLWidget(parent),
-  xRot(180*16.0),
+  xRot(0),
   yRot(0),
   zRot(0),
   xTra(0),
   yTra(0),
-  zTra(-200)
+  zTra(-150)
 {
    setMouseTracking(true);
 }
@@ -85,13 +86,14 @@ void MyGLWidget::paintGL() {
     drawPose(0.15);
    drawAxis(200);
    drawTraject();
+   //drawCar();
    //drawCoil();
    //drawPose(100);
+   printf("traject size %d\n", pose_matrices.size());
 }
 
 void MyGLWidget::drawTraject()
 {
-  printf("saved pose size is %d\n", pose_matrices.size());
   for(int i = 0; i<pose_matrices.size(); i++){
      glPushMatrix();
      glMultMatrixd(static_cast<GLdouble*>( (pose_matrices)[i].data() ));
@@ -100,6 +102,52 @@ void MyGLWidget::drawTraject()
      glPopMatrix();
   }
 }
+
+void MyGLWidget::drawCar()
+{ // car
+    setMaterial(1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,50);
+    glPushMatrix();
+    if(!pose_matrices.isEmpty())
+      glMultMatrixd(static_cast<GLdouble*>( (pose_matrices.last()).data() ));
+    //draw body
+    glPushMatrix();                   // body
+    glScalef(0.7,.5, 0.3);
+    glColor4f(0.7,0,0,1);       //red car body
+    glutSolidCube(1);
+    glPopMatrix();
+    //draw body end
+    
+    //draw head
+    glPushMatrix();
+    glTranslatef(0.2,0,.2);
+    glScalef(0.2,.2, 0.2);
+    glColor4f(0.,0,0.7,0.5);
+    glutSolidCube(1);
+    glPopMatrix();
+    //draw head end
+    
+    // draw tyres
+    glTranslatef(0,0,-.3);
+    glPushMatrix();
+    glTranslatef(-.2,-.2,0);
+    glRotatef(90, 1.0, 0.0, 0.0);
+    glColor4f(0.8,0.8,0.8,0.5);  // gray white tyres
+    glutSolidTorus(0.08,.11,8,8);       // wheel
+    glTranslatef(.4,0,0);
+    glutSolidTorus(0.08,.11,8,8);       // wheel
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(-.2,.2,0);
+    glRotatef(90, 1.0, 0.0, 0.0);
+    glutSolidTorus(0.08,0.11,8,8);       // wheel
+    glTranslatef(.4,0,0);
+    glutSolidTorus(0.08,0.11,8,8);       // wheel
+    glPopMatrix();
+    // draw tyres end
+     
+    glPopMatrix();
+}
+
 // Shape For Debuging 
 void MyGLWidget::drawCoil() {
     const float nbSteps = 200.0;
@@ -141,15 +189,15 @@ void MyGLWidget::drawAxis(int scale)
 {
    int nScale = -1 * scale;
     glBegin(GL_LINES);
-    glColor4f (1, 0, 0, 1.0);
+    glColor4f (1, 0, 0, 1.0); //R for x
     glVertex3f(nScale, 0, 0);
     glColor4f (1, 0, 0, 0.0);
     glVertex3f(scale, 0, 0);
-    glColor4f (0, 1, 0, 1.0);
+    glColor4f (0, 1, 0, 1.0); //g for y
     glVertex3f(0, nScale, 0);
     glColor4f (0, 1, 0, 0.0);
     glVertex3f(0, scale, 0);
-    glColor4f (0, 0, 1, 1.0);
+    glColor4f (0, 0, 1, 1.0); //b for z
     glVertex3f(0, 0, nScale);
     glColor4f (0, 0, 1, 0.0);
     glVertex3f(0, 0, scale);
@@ -260,7 +308,7 @@ void MyGLWidget::setZRotation(int angle) {
 
 void MyGLWidget::resetRobotPose() {
   printf("reset button pressed\n");
-  xRot = 180*16.0;
+  xRot = 0;
   yRot = 0;
   zRot = 0;
   xTra = 0;
@@ -271,15 +319,30 @@ void MyGLWidget::resetRobotPose() {
 }
 
 void MyGLWidget::addTransform(QMatrix4x4 transform){
-  printf("add transform received by glwidget\n");
+  //printf("add transform received by glwidget\n");
    pose_matrices.push_back(transform); //keep for later
-   for(int i = 0; i < 4; ++i)
+   /*for(int i = 0; i < 4; ++i)
    {
      for(int j = 0; j <4; ++j)
      {
        printf("%lf ", transform(i,j));
      }
      printf("\n");
-   }
+   }*/
    updateGL();
+}
+
+void MyGLWidget::setMaterial ( GLfloat ambientR, GLfloat ambientG, GLfloat ambientB, 
+		   GLfloat diffuseR, GLfloat diffuseG, GLfloat diffuseB, 
+		   GLfloat specularR, GLfloat specularG, GLfloat specularB,
+		   GLfloat shininess ) {
+
+    GLfloat ambient[] = { ambientR, ambientG, ambientB };
+    GLfloat diffuse[] = { diffuseR, diffuseG, diffuseB };
+    GLfloat specular[] = { specularR, specularG, specularB };
+
+    glMaterialfv(GL_FRONT_AND_BACK,GL_AMBIENT,ambient);
+    glMaterialfv(GL_FRONT_AND_BACK,GL_DIFFUSE,diffuse);
+    glMaterialfv(GL_FRONT_AND_BACK,GL_SPECULAR,specular);
+    glMaterialf(GL_FRONT_AND_BACK,GL_SHININESS,shininess);
 }

@@ -29,7 +29,12 @@ protected:
     void setXRotation(int angle);
     void setYRotation(int angle);
     void setZRotation(int angle);
+    void drawCar();
     void drawTraject();
+    void setMaterial ( GLfloat ambientR, GLfloat ambientG, GLfloat ambientB,
+                   GLfloat diffuseR, GLfloat diffuseG, GLfloat diffuseB,
+                   GLfloat specularR, GLfloat specularG, GLfloat specularB,
+                   GLfloat shininess );
 private:
     int xRot, yRot, zRot;
     float xTra, yTra, zTra;

@@ -66,13 +66,17 @@ signals:
     void addTransform(QMatrix4x4 trans);
 
 private:
-	int init_argc;
-	char** init_argv;
-	ros::Publisher chatter_publisher;
-        ros::Subscriber sub;
+    int init_argc;
+    char** init_argv;
+    ros::Publisher chatter_publisher;
+    ros::Subscriber sub;
     QStringListModel logging_model;
-    btScalar* gltransform; // double
+    btScalar* gltransform; // double*
     void vodomCallback(const nav_msgs::OdometryConstPtr& odoMsg);
+    void mat2dist(const QMatrix4x4& t, double &dist);
+    void mat2RPY(const QMatrix4x4& t, double& roll, double& pitch, double& yaw);
+    bool isBigTransform(const QMatrix4x4& t);
+    QMatrix4x4 last_transform_;
 };
 
 

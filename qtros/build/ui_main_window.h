@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'main_window.ui'
 **
-** Created: Wed Nov 14 10:51:29 2012
+** Created: Thu Nov 15 16:00:52 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -58,6 +58,11 @@ public:
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_2;
     MyGLWidget *glwidget;
+    QWidget *tab;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *visual_label_l;
+    QLabel *visual_label_r;
     QMenuBar *menubar;
     QMenu *menu_File;
     QStatusBar *statusbar;
@@ -154,6 +159,30 @@ public:
         verticalLayout_5->addWidget(groupBox_2);
 
         tab_manager->addTab(pose_tab, QString());
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        widget = new QWidget(tab);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 10, 441, 211));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        visual_label_l = new QLabel(widget);
+        visual_label_l->setObjectName(QString::fromUtf8("visual_label_l"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(visual_label_l->sizePolicy().hasHeightForWidth());
+        visual_label_l->setSizePolicy(sizePolicy1);
+
+        horizontalLayout->addWidget(visual_label_l);
+
+        visual_label_r = new QLabel(widget);
+        visual_label_r->setObjectName(QString::fromUtf8("visual_label_r"));
+
+        horizontalLayout->addWidget(visual_label_r);
+
+        tab_manager->addTab(tab, QString());
 
         hboxLayout->addWidget(tab_manager);
 
@@ -169,11 +198,11 @@ public:
         MainWindowDesign->setStatusBar(statusbar);
         dock_status = new QDockWidget(MainWindowDesign);
         dock_status->setObjectName(QString::fromUtf8("dock_status"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(dock_status->sizePolicy().hasHeightForWidth());
-        dock_status->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(dock_status->sizePolicy().hasHeightForWidth());
+        dock_status->setSizePolicy(sizePolicy2);
         dock_status->setMinimumSize(QSize(325, 428));
 #ifndef QT_NO_TOOLTIP
         dock_status->setToolTip(QString::fromUtf8(""));
@@ -193,8 +222,8 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         frame = new QFrame(dockWidgetContents_2);
         frame->setObjectName(QString::fromUtf8("frame"));
-        sizePolicy1.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
-        frame->setSizePolicy(sizePolicy1);
+        sizePolicy2.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy2);
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         verticalLayout_3 = new QVBoxLayout(frame);
@@ -259,11 +288,11 @@ public:
         button_connect = new QPushButton(groupBox);
         button_connect->setObjectName(QString::fromUtf8("button_connect"));
         button_connect->setEnabled(true);
-        QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(button_connect->sizePolicy().hasHeightForWidth());
-        button_connect->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(button_connect->sizePolicy().hasHeightForWidth());
+        button_connect->setSizePolicy(sizePolicy3);
 
         gridLayout->addWidget(button_connect, 8, 1, 1, 1);
 
@@ -279,15 +308,15 @@ public:
 
         resetButton = new QPushButton(dockWidgetContents_2);
         resetButton->setObjectName(QString::fromUtf8("resetButton"));
-        sizePolicy2.setHeightForWidth(resetButton->sizePolicy().hasHeightForWidth());
-        resetButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(resetButton->sizePolicy().hasHeightForWidth());
+        resetButton->setSizePolicy(sizePolicy3);
 
         verticalLayout->addWidget(resetButton);
 
         quit_button = new QPushButton(dockWidgetContents_2);
         quit_button->setObjectName(QString::fromUtf8("quit_button"));
-        sizePolicy2.setHeightForWidth(quit_button->sizePolicy().hasHeightForWidth());
-        quit_button->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(quit_button->sizePolicy().hasHeightForWidth());
+        quit_button->setSizePolicy(sizePolicy3);
 
         verticalLayout->addWidget(quit_button);
 
@@ -300,8 +329,7 @@ public:
         QWidget::setTabOrder(checkbox_use_environment, quit_button);
         QWidget::setTabOrder(quit_button, checkbox_remember_settings);
         QWidget::setTabOrder(checkbox_remember_settings, button_connect);
-        QWidget::setTabOrder(button_connect, tab_manager);
-        QWidget::setTabOrder(tab_manager, resetButton);
+        QWidget::setTabOrder(button_connect, resetButton);
 
         menubar->addAction(menu_File->menuAction());
         menu_File->addAction(action_Preferences);
@@ -316,7 +344,7 @@ public:
         QObject::connect(quit_button, SIGNAL(clicked()), MainWindowDesign, SLOT(close()));
         QObject::connect(resetButton, SIGNAL(clicked()), glwidget, SLOT(resetRobotPose()));
 
-        tab_manager->setCurrentIndex(1);
+        tab_manager->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindowDesign);
@@ -334,6 +362,9 @@ public:
         tab_manager->setTabText(tab_manager->indexOf(tab_status), QApplication::translate("MainWindowDesign", "Ros Communications", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("MainWindowDesign", "Robot position", 0, QApplication::UnicodeUTF8));
         tab_manager->setTabText(tab_manager->indexOf(pose_tab), QApplication::translate("MainWindowDesign", "robot_pose", 0, QApplication::UnicodeUTF8));
+        visual_label_l->setText(QString());
+        visual_label_r->setText(QString());
+        tab_manager->setTabText(tab_manager->indexOf(tab), QApplication::translate("MainWindowDesign", "image", 0, QApplication::UnicodeUTF8));
         menu_File->setTitle(QApplication::translate("MainWindowDesign", "&App", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("MainWindowDesign", "Ros Master", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindowDesign", "Ros Master Url", 0, QApplication::UnicodeUTF8));

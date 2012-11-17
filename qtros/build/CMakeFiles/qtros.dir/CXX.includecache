@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/mou/myProject/ROS/qtros/src/../include/qtros/myGLWidget.hpp
+QtOpenGL/QGLWidget
+-
+QMatrix4x4
+-
+
 /home/mou/myProject/ROS/qtros/src/../include/qtros/qnode.hpp
 ros/ros.h
 -
@@ -21,6 +27,22 @@ nav_msgs/Odometry.h
 -
 LinearMath/btTransform.h
 /home/mou/myProject/ROS/qtros/src/../include/qtros/LinearMath/btTransform.h
+
+/home/mou/myProject/ROS/qtros/src/myGLWidget.cpp
+QtGui/QMouseEvent
+-
+../include/qtros/myGLWidget.hpp
+/home/mou/myProject/ROS/qtros/src/../include/qtros/myGLWidget.hpp
+GL/gl.h
+-
+GL/glut.h
+-
+stdlib.h
+-
+stdio.h
+-
+cmath
+-
 
 /home/mou/myProject/ROS/qtros/src/qnode.cpp
 ros/ros.h
@@ -1500,6 +1522,12 @@ Qt3Support/q3valuelist.h
 QtCore/qstring.h
 -
 
+/usr/include/qt4/QtCore/qt_windows.h
+windows.h
+-
+ceconfig.h
+-
+
 /usr/include/qt4/QtCore/qtextcodec.h
 QtCore/qstring.h
 -
@@ -1569,6 +1597,10 @@ QtCore/QPoint
 /usr/include/qt4/QtGui/QMatrix4x4
 qmatrix4x4.h
 /usr/include/qt4/QtGui/qmatrix4x4.h
+
+/usr/include/qt4/QtGui/QMouseEvent
+qevent.h
+/usr/include/qt4/QtGui/qevent.h
 
 /usr/include/qt4/QtGui/QStringListModel
 qstringlistmodel.h
@@ -1640,6 +1672,16 @@ QtGui/qwindowdefs.h
 
 /usr/include/qt4/QtGui/qdrag.h
 QtCore/qobject.h
+-
+
+/usr/include/qt4/QtGui/qdrawutil.h
+QtCore/qnamespace.h
+-
+QtCore/qstring.h
+-
+QtCore/qmargins.h
+-
+QtGui/qpixmap.h
 -
 
 /usr/include/qt4/QtGui/qevent.h
@@ -1788,6 +1830,48 @@ QtGui/qwindowdefs.h
 QtCore/qrect.h
 -
 
+/usr/include/qt4/QtGui/qpaintengine.h
+QtCore/qnamespace.h
+-
+QtCore/qobjectdefs.h
+-
+QtCore/qscopedpointer.h
+-
+QtGui/qpainter.h
+-
+
+/usr/include/qt4/QtGui/qpainter.h
+QtCore/qnamespace.h
+-
+QtCore/qrect.h
+-
+QtCore/qpoint.h
+-
+QtCore/qscopedpointer.h
+-
+QtGui/qpixmap.h
+-
+QtGui/qimage.h
+-
+QtGui/qtextoption.h
+-
+QtGui/qdrawutil.h
+-
+QtGui/qpolygon.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qmatrix.h
+-
+QtGui/qtransform.h
+-
+QtGui/qfontinfo.h
+-
+QtGui/qfontmetrics.h
+-
+
 /usr/include/qt4/QtGui/qpainterpath.h
 QtGui/qmatrix.h
 -
@@ -1805,6 +1889,12 @@ QtCore/qscopedpointer.h
 /usr/include/qt4/QtGui/qpalette.h
 QtGui/qwindowdefs.h
 -
+QtGui/qcolor.h
+-
+QtGui/qbrush.h
+-
+
+/usr/include/qt4/QtGui/qpen.h
 QtGui/qcolor.h
 -
 QtGui/qbrush.h
@@ -1922,6 +2012,14 @@ QtGui/qwidget.h
 QtGui/qicon.h
 -
 
+/usr/include/qt4/QtGui/qtextoption.h
+QtCore/qnamespace.h
+-
+QtCore/qchar.h
+-
+QtCore/qmetatype.h
+-
+
 /usr/include/qt4/QtGui/qtransform.h
 QtGui/qmatrix.h
 -
@@ -2008,5 +2106,41 @@ QtCore/qglobal.h
 
 /usr/include/qt4/QtGui/qwmatrix.h
 QtGui/qmatrix.h
+-
+
+/usr/include/qt4/QtOpenGL/QGLWidget
+qgl.h
+/usr/include/qt4/QtOpenGL/qgl.h
+
+/usr/include/qt4/QtOpenGL/qgl.h
+QtGui/qwidget.h
+-
+QtGui/qpaintengine.h
+-
+QtOpenGL/qglcolormap.h
+-
+QtCore/qmap.h
+-
+QtCore/qscopedpointer.h
+-
+QtCore/qt_windows.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+
+/usr/include/qt4/QtOpenGL/qglcolormap.h
+QtGui/qcolor.h
+-
+QtCore/qvector.h
 -
 

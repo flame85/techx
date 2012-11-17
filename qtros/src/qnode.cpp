@@ -17,8 +17,6 @@
 #include <sstream>
 #include "../include/qtros/qnode.hpp"
 #include "std_msgs/Float64MultiArray.h"
-//#include <tf/transform_broadcaster.h>
-//#include <tf/transform_listener.h>
 
 static const std::string topic_name = "/stereo_odometer/odometry";
 
@@ -57,7 +55,6 @@ bool QNode::init() {
 	// Add your ros communications here.
 	//chatter_publisher = n.advertise<std_msgs::String>("chatter", 1000);
         sub = n.subscribe(topic_name, 1, &QNode::vodomCallback, this);
-        printf("subscribe to topic %s\n", topic_name.c_str());
 	start();
 	return true;
 }
@@ -79,10 +76,48 @@ bool QNode::init(const std::string &master_url, const std::string &host_url) {
 	return true;
 }
 
+void QNode::mat2dist(const QMatrix4x4& t, double &dist){
+    dist = sqrt(t(0,3)*t(0,3)+t(1,3)*t(1,3)+t(2,3)*t(2,3));
+}
+///Get euler angles from affine matrix (helper for isBigTransform)
+void QNode::mat2RPY(const QMatrix4x4& t, double& roll, double& pitch, double& yaw) {
+    roll = atan2(t(2,1),t(2,2));
+    pitch = atan2(-t(2,0),sqrt(t(2,1)*t(2,1)+t(2,2)*t(2,2)));
+    yaw = atan2(t(1,0),t(0,0));
+}
+
+bool QNode::isBigTransform(const QMatrix4x4& t)
+{
+    double roll, pitch, yaw, dist;
+    double lastRoll, lastPitch, lastYaw, lastDist;
+
+    mat2RPY(t, roll,pitch,yaw);
+    mat2dist(t, dist);
+
+    mat2RPY(last_transform_, lastRoll, lastPitch, lastYaw);
+    mat2dist(last_transform_, lastDist);
+
+    roll = roll/M_PI*180;
+    pitch = pitch/M_PI*180;
+    yaw = yaw/M_PI*180;
+    lastRoll = lastRoll/M_PI*180;
+    lastPitch = lastPitch/M_PI*180;
+    lastYaw = lastYaw/M_PI*180;
+
+    double deltaRoll = fabs(roll - lastRoll);
+    double deltaPitch = fabs(pitch - lastPitch);
+    double deltaYaw = fabs(yaw - lastYaw);
+    double deltaDist = fabs(dist - lastDist);
+
+    double max_angle = std::max(deltaRoll,std::max(deltaPitch,deltaYaw));
+    /*if(t(1,3) > 0.2)
+       return false;*/
+
+    // at least 10cm or 5deg
+    return (deltaDist > 0.1 || max_angle > 5);
+}
 void QNode::vodomCallback(const nav_msgs::OdometryConstPtr& odoMsg)
 {
-   printf("odometry listener: my position: (%lf %lf), orientation (%lf)\n", \
-       odoMsg->pose.pose.position.x, odoMsg->pose.pose.position.y, odoMsg->pose.pose.orientation.z);
    const geometry_msgs::Pose& msg = odoMsg->pose.pose;
    btTransform transf = Transform(Quaternion(msg.orientation.x, msg.orientation.y, msg.orientation.z, msg.orientation.w), 
                                   Vector3(msg.position.x, msg.position.y, msg.position.z));
@@ -95,8 +130,12 @@ void QNode::vodomCallback(const nav_msgs::OdometryConstPtr& odoMsg)
    transform(3,0) = 0.;
    transform(3,1) = 0.;
    transform(3,2) = 0.;*/
-   //transform = transform.transposed();
-   emit addTransform(transform);
+   transform = transform.transposed();// transform for opengl use later
+   if(isBigTransform(transform))
+   {
+     emit addTransform(transform);
+     last_transform_ = transform;
+   }
 
    /*for(int i = 0; i < 16; i++)
    {
