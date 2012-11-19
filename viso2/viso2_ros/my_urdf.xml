@@ -1,0 +1,10 @@
+<robot name="test_robot">
+  <link name="base_link" />
+  <link name="bumblebee" />
+
+  <joint name="bumblebee_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="bumblebee"/>
+    <origin xyz="0.27 0 0.5" rpy="0 0.244346095 0" />
+  </joint>
+</robot>

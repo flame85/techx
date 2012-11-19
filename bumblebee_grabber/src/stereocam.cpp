@@ -68,7 +68,7 @@ stereoCam::stereoCam(char* intrinsic_filename, char* extrinsic_filename)
     m_rgb_right_rec_pub = m_it->advertiseCamera("/right_rectified/rgb_rectified", 1);
     m_rgb_big_left_rec_pub = m_it->advertiseCamera("/big_left_rectified/rgb_rectified", 1);
     m_rgb_big_right_rec_pub = m_it->advertiseCamera("/big_right_rectified/rgb_rectified", 1);
-    m_Q_pub = m_nh.advertise<std_msgs::Float64MultiArray>("/camera/q_matrix", 1);
+    m_Q_pub = m_nh.advertise<std_msgs::Float64MultiArray>("/bumblebee/q_matrix", 1);
     getInitParams();
     // reading intrinsic parameters
     FileStorage fs(intrinsic_filename, CV_STORAGE_READ);
@@ -122,6 +122,15 @@ stereoCam::stereoCam(char* intrinsic_filename, char* extrinsic_filename)
     initUndistortRectifyMap(BM1, BD1, BR1, BP1, bimg_size, CV_16SC2, bmap11, bmap12);
     initUndistortRectifyMap(BM2, BD2, BR2, BP2, bimg_size, CV_16SC2, bmap21, bmap22);
     initCameraInfo();
+    //initTransform2Base(0.27, 0, 0.5, 0, 0.244346, 0);
+    initTransform2Base(0, 0, 0, -1.5707963, 0, -1.5707963);
+}
+
+void stereoCam::initTransform2Base(float x, float y, float z, float roll, float pitch, float yaw)
+{
+  btMatrix3x3 rotMat;
+  rotMat.setEulerYPR(yaw, pitch, roll);
+  m_tr = tf::Transform(rotMat, btVector3(x,y,z));
 }
 
 void stereoCam::initCameraInfo()
@@ -262,8 +271,8 @@ void stereoCam::grabRGBs()
 
 void stereoCam::publishImagePairs()
 {
-    m_left_cam_info.header.frame_id = "/camera";
-    m_right_cam_info.header.frame_id = "/camera";
+    m_left_cam_info.header.frame_id = m_frame_id;
+    m_right_cam_info.header.frame_id = m_frame_id;
     //publish left image
     ros::Time time_now = ros::Time::now();
     m_cvi.header.stamp = time_now;
@@ -292,8 +301,8 @@ void stereoCam::publishImagePairs()
     remap(m_rightRGB, m_bigRightRec, bmap21, bmap22, INTER_LINEAR);
 
 
-    m_left_rec_cam_info.header.frame_id = "/camera";
-    m_right_rec_cam_info.header.frame_id = "/camera";
+    m_left_rec_cam_info.header.frame_id = m_frame_id;
+    m_right_rec_cam_info.header.frame_id = m_frame_id;
     
     //publish left rectified image
     time_now = ros::Time::now();
@@ -315,8 +324,8 @@ void stereoCam::publishImagePairs()
     m_rgb_right_rec_pub.publish(m_right_rec_msg, m_right_rec_cam_info);
 
     
-    m_big_left_rec_cam_info.header.frame_id = "/camera";
-    m_big_right_rec_cam_info.header.frame_id = "/camera";
+    m_big_left_rec_cam_info.header.frame_id = m_frame_id;
+    m_big_right_rec_cam_info.header.frame_id = m_frame_id;
 
     //publish big left rectified image
     time_now = ros::Time::now();
@@ -339,6 +348,7 @@ void stereoCam::publishImagePairs()
 
     //publish q matrix
     m_Q_pub.publish(m_Q_msg);
+    m_br.sendTransform(tf::StampedTransform(m_tr, ros::Time::now(), "base_link", m_frame_id));
 }
 
 stereoCam::~stereoCam(){

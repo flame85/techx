@@ -48,7 +48,6 @@ SET(CMAKE_C_INCLUDE_PATH
   "/opt/ros/electric/ros/tools/rospack"
   "/opt/ros/electric/ros/tools/rospack/include"
   "."
-  "/usr/include/qt4/QtOpenGL"
   "../pgrlibdcstereo"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

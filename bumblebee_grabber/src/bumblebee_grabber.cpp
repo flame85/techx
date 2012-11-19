@@ -15,6 +15,7 @@ int main(int argc, char* argv[])
   char* extrinsic_filename = 0;
   if(argc > 1)
   {    
+    printf("manually give intrinsic and extrinsic params\n");
     for( int i = 1; i < argc; i++ )
     {
       if( strcmp(argv[i], "-i" ) == 0 )
@@ -30,8 +31,8 @@ int main(int argc, char* argv[])
   }
   else
   {
-    intrinsic_filename = (char*)"intrinsics.yml";
-    extrinsic_filename = (char*)"extrinsics.yml";
+    intrinsic_filename = (char*)"/home/mou/myProject/ROS/bumblebee_grabber/intrinsics.yml";
+    extrinsic_filename = (char*)"/home/mou/myProject/ROS/bumblebee_grabber/extrinsics.yml";
   }
   if(intrinsic_filename == 0)
   {

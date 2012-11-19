@@ -3,6 +3,7 @@
 #include <opencv2/opencv.hpp>
 #include "pgr_stereocam.h"
 #include "ros/ros.h"
+ #include <tf/transform_broadcaster.h>
 #include <sensor_msgs/Image.h>
 #include <cv_bridge/cv_bridge.h>
 //#include <camera_info_manager/camera_info_manager.h>
@@ -56,6 +57,8 @@ class stereoCam {
         sensor_msgs::CameraInfo m_right_rec_cam_info;
         sensor_msgs::CameraInfo m_big_left_rec_cam_info;
         sensor_msgs::CameraInfo m_big_right_rec_cam_info;
+        tf::Transform m_tr;
+        tf::TransformBroadcaster m_br;
         string m_frame_id;
         string m_camera_name;
 
@@ -72,5 +75,6 @@ class stereoCam {
         void getInitParams();
         void cleanup_and_exit( dc1394camera_t* camera );
         void initCameraInfo();
+        void initTransform2Base(float x, float y, float z, float roll, float pitch, float yaw);
 };
 #endif

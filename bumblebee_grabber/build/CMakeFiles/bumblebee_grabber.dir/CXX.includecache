@@ -25,6 +25,8 @@ pgr_stereocam.h
 /home/mou/myProject/ROS/bumblebee_grabber/src/pgr_stereocam.h
 ros/ros.h
 /home/mou/myProject/ROS/bumblebee_grabber/src/ros/ros.h
+tf/transform_broadcaster.h
+-
 sensor_msgs/Image.h
 -
 cv_bridge/cv_bridge.h
@@ -581,6 +583,14 @@ LinearMath/btTransform.h
 /opt/ros/electric/stacks/geometry/tf/include/tf/LinearMath/btTransform.h
 sstream
 -
+
+/opt/ros/electric/stacks/geometry/tf/include/tf/transform_broadcaster.h
+tf/tf.h
+/opt/ros/electric/stacks/geometry/tf/include/tf/tf/tf.h
+tf/tfMessage.h
+/opt/ros/electric/stacks/geometry/tf/include/tf/tf/tfMessage.h
+ros/ros.h
+/opt/ros/electric/stacks/geometry/tf/include/tf/ros/ros.h
 
 /opt/ros/electric/stacks/geometry/tf/include/tf/transform_datatypes.h
 string

@@ -259,30 +259,3 @@ Parsed CXX implicit link information from above output:
   implicit dirs: [/usr/lib/gcc/i686-linux-gnu/4.6.1;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
 
 
-Determining if the Q_WS_X11 exist passed with the following output:
-Change Dir: /home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp
-
-Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[1]: Entering directory `/home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o
-/usr/bin/gcc   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o   -c /home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
-/usr/bin/gcc         CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.c.o  -o cmTryCompileExec -rdynamic 
-make[1]: Leaving directory `/home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp'
-
-File /home/mou/myProject/ROS/bumblebee_grabber/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <QtCore/qglobal.h>
-
-void cmakeRequireSymbol(int dummy,...){(void)dummy;}
-int main()
-{
-#ifndef Q_WS_X11
-  cmakeRequireSymbol(0,&Q_WS_X11);
-#endif
-  return 0;
-}
-

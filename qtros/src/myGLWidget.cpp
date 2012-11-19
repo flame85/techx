@@ -86,7 +86,7 @@ void MyGLWidget::paintGL() {
     drawPose(0.15);
    drawAxis(200);
    drawTraject();
-   //drawCar();
+   drawCar();
    //drawCoil();
    //drawPose(100);
    printf("traject size %d\n", pose_matrices.size());
