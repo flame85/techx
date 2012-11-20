@@ -13,7 +13,8 @@
 
 // to remove after debugging
 
-#define DEBUG 0
+#define DEBUG 1
+#define USE_MOVEMENT_CONSTRAIN 1
 #if(DEBUG)
 #include <opencv2/highgui/highgui.hpp>
 #endif
@@ -181,7 +182,52 @@ protected:
           camera_motion = motion;
         }
         reference_motion_ = motion; // store last motion as reference
+        std::cout<< camera_motion << "\n" <<std::endl;
+#if (USE_MOVEMENT_CONSTRAIN)
+        double deltaRoll = atan2(camera_motion.val[2][1], camera_motion.val[2][2]);
+        double deltaPitch = asin(-camera_motion.val[2][0]);
+        double deltaYaw = atan2(camera_motion.val[1][0], camera_motion.val[0][0]);
+        double tanRoll = camera_motion.val[2][1] / camera_motion.val[2][2];
+        double tanPitch = tan(deltaPitch);
+        printf("deltaroll is %lf\n", deltaRoll);
+        printf("deltaPitch is %lf\n", deltaPitch);
+        printf("deltaYaw is %lf\n", deltaYaw);
+        double deltaX = camera_motion.val[0][3];
+        double deltaY = camera_motion.val[1][3];
+        double deltaZ = camera_motion.val[2][3];
+        printf("dx %lf, dy %lf, dz %lf, tanRoll %lf tanPitch %lf\n",deltaX, deltaY, deltaZ, tanRoll, tanPitch);
+        if(deltaY > 0 && deltaY > tanRoll * deltaZ)
+        {
+           camera_motion.val[1][3] = tanRoll * deltaZ;
+          //printf("dy %lf deltaY, dynew %lf\n", deltaY,camera_motion.val[2][3]);
+        }
+        else if(deltaY < 0 && deltaY < -tanRoll * deltaZ)
+        {
+           camera_motion.val[1][3] = -tanRoll * deltaZ;
+          //printf("dy %lf deltaY, dynew %lf\n", deltaY,camera_motion.val[2][3]);
+        }
 
+        /*if(deltaX > 0 && deltaX > tanPitch * deltaZ)
+        {
+           camera_motion.val[0][3] = tanPitch * deltaZ;
+          printf("dx %lf, dxnew %lf\n", deltaX,camera_motion.val[1][3]);
+        }
+        else if(deltaX < 0 && deltaX < -tanPitch * deltaZ)
+        {
+           camera_motion.val[0][3] = -tanPitch * deltaZ;
+          printf("dx %lf, dxnew %lf\n", deltaX,camera_motion.val[1][3]);
+        }*/
+        /*
+        if(deltaPitch > 0)
+        {
+          deltaPitch = deltaPitch+fabs(deltaRoll)+fabs(deltaYaw);
+        }
+        else
+        {
+          deltaPitch = deltaPitch-fabs(deltaRoll)-fabs(deltaYaw);
+        }*/
+        deltaPitch = deltaPitch+deltaYaw;
+#endif
         // calculate current feature flow
         std::vector<Matcher::p_match> matches = visual_odometer_->getMatches();
         std::vector<int> inlier_indices = visual_odometer_->getInlierIndices();
@@ -206,7 +252,10 @@ protected:
         {
           cv::Point pt1(matches[i].u1p,matches[i].v1p);
           cv::Point pt2(matches[i].u1c,matches[i].v1c + last_l_image_.rows);
-          cv::line(outImg, pt1, pt2, cv::Scalar(255,0,0));
+          if(pt1.y > 239)
+            cv::line(outImg, pt1, pt2, cv::Scalar(255,0,0));
+          //else
+            //cv::line(outImg, pt1, pt2, cv::Scalar(0,255,0));
         }
         cv::imshow("matching image", outImg);
     cv::waitKey(10);
@@ -224,9 +273,13 @@ protected:
             << (last_motion_small_ ? "small." : "normal."));
 
         btMatrix3x3 rot_mat(
+          cos(deltaPitch), 0, sin(deltaPitch),
+          0,               1,           0, 
+          -sin(deltaPitch), 0, cos(deltaPitch));
+        /*btMatrix3x3 rot_mat(
           camera_motion.val[0][0], camera_motion.val[0][1], camera_motion.val[0][2],
           camera_motion.val[1][0], camera_motion.val[1][1], camera_motion.val[1][2],
-          camera_motion.val[2][0], camera_motion.val[2][1], camera_motion.val[2][2]);
+          camera_motion.val[2][0], camera_motion.val[2][1], camera_motion.val[2][2]);*/
         btVector3 t(camera_motion.val[0][3], camera_motion.val[1][3], camera_motion.val[2][3]);
    //rotation
    /*double delta_yaw = 0;

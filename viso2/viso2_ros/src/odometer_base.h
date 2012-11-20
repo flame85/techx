@@ -123,11 +123,12 @@ protected:
       //0.244346095
       rotMat1.setEulerYPR(-1.5707963, 0.0, -1.570796);
       btMatrix3x3 rotMat2;
-      //rotMat2.setEulerYPR(0, 0.2, 0.);
-      //rotMat2.setEulerYPR(0, 0.0, -0.174532922); // use this for horizontal placed bumblebee
+      rotMat2.setEulerYPR(0, 0., 0.);
+      //rotMat2.setEulerYPR(0, -0.0, 0.0); // use this for horizontal placed bumblebee
+      //rotMat2.setEulerYPR(0, -0.25, -0.24); // use this for horizontal placed bumblebee
       btMatrix3x3 rotMat = rotMat1 * rotMat2;
       //tf::Transform tr(rotMat, btVector3(0.38, 0, 0.7));
-      tf::Transform tr(rotMat, btVector3(0., 0, 0.));
+      tf::Transform tr(rotMat, btVector3(0.32, 0, 0.28));
       base_to_sensor.setData(tr);
 #endif
     }
